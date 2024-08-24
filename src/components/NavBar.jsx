@@ -1,12 +1,15 @@
-export default function NavBar ({handleNextClick, handlePreviusClick}){
+/* eslint-disable react/prop-types */
+function NavBar({ handlePokemonSelect, pokemonList }) {
   return (
     <>
-<button onClick={handlePreviusClick}>Previus</button>
-<button onClick={handleNextClick}>Next</button>
-
+      {pokemonList.map((pokemon) => (
+        <button
+          key={pokemon.name}
+          onClick={() => handlePokemonSelect(pokemon)}>
+          {pokemon.name}
+        </button>
+      ))}
     </>
-
-
-
   );
 }
+export default NavBar;

@@ -1,6 +1,6 @@
 import PokemonCard from './components/PokemonCard';
 import NavBar from './components/NavBar';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
@@ -35,19 +35,9 @@ function App() {
   const handlePokemonSelect = (pokemon) => {
     setSelectedPokemon(pokemon);
   };
-
-  // const handleNextClick = () => {
-  //   if (pokemonIndex < pokemonList.length - 1) {
-  //     setPokemonIndex(pokemonIndex + 1);
-  //   }
-  // };
-
-  // const handlePreviusClick = () => {
-  //   if (pokemonIndex > 0) {
-  //     setPokemonIndex(pokemonIndex - 1);
-  //   }
-  // };
-
+  useEffect(() => {
+    console.log('Hello pokemon trainer :)');
+  }, []);
   return (
     <>
       <NavBar
